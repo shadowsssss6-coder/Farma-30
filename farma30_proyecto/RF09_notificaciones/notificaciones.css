@@ -1,0 +1,19 @@
+/* RF09 - Notificaciones */
+.notif-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+.unread-badge { background-color:#fadbd8; color:#e74c3c; font-size:12px; font-weight:bold; padding:3px 10px; border-radius:4px; }
+.filter-tabs { display:flex; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
+.ftab { padding:6px 14px; border:1px solid #ccc; border-radius:4px; background:white; font-size:12px; font-weight:bold; cursor:pointer; color:#666; font-family:Arial; }
+.ftab.active { background-color:#3498db; color:white; border-color:#3498db; }
+.notif-item { display:flex; align-items:flex-start; gap:12px; padding:14px 16px; background:white; border:1px solid #ddd; border-radius:6px; margin-bottom:8px; }
+.notif-item.unread { border-left:3px solid #3498db; }
+.notif-item:hover { border-color:#3498db; }
+.notif-icon { width:36px; height:36px; border-radius:6px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px; }
+.notif-body { flex:1; }
+.notif-title { font-size:13px; font-weight:bold; color:#333; margin-bottom:2px; }
+.notif-desc { font-size:12px; color:#666; line-height:1.4; }
+.notif-actions { display:flex; gap:8px; margin-top:8px; }
+.btn-close  { padding:4px 12px; border-radius:4px; border:none; font-size:12px; font-weight:bold; cursor:pointer; background:rgba(0,0,0,0.07); }
+.btn-detail { padding:4px 12px; border-radius:4px; border:none; font-size:12px; font-weight:bold; cursor:pointer; background:#3498db; color:white; }
+.notif-right { display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+.notif-time { font-size:11px; color:#aaa; white-space:nowrap; }
+.notif-dot { width:8px; height:8px; border-radius:50%; background:#3498db; }

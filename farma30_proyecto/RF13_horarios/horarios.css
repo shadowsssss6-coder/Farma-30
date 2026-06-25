@@ -1,0 +1,17 @@
+/* RF13 - Horarios */
+.sched-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:8px; margin-bottom:24px; }
+.day-card { background:white; border:1px solid #ddd; border-radius:6px; padding:14px 8px; text-align:center; }
+.day-card.today { background-color:#3498db; border-color:#3498db; }
+.day-card.closed { opacity:0.65; }
+.day-name { font-size:11px; font-weight:bold; color:#888; margin-bottom:6px; }
+.day-card.today .day-name { color:rgba(255,255,255,0.8); }
+.day-open { font-size:12px; font-weight:bold; color:#333; }
+.day-card.today .day-open { color:white; }
+.day-card.closed .day-open { color:#e74c3c; }
+.day-close { font-size:10px; color:#aaa; margin-top:3px; }
+.day-card.today .day-close { color:rgba(255,255,255,0.7); }
+.today-badge { display:inline-block; background:rgba(255,255,255,0.25); color:white; font-size:10px; font-weight:bold; padding:1px 6px; border-radius:3px; margin-top:4px; }
+.contact-row { display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid #eee; font-size:13px; }
+.contact-row:last-child { border-bottom:none; }
+.contact-label { color:#888; font-weight:bold; min-width:140px; }
+@media(max-width:600px) { .sched-grid { grid-template-columns:repeat(4,1fr); } }

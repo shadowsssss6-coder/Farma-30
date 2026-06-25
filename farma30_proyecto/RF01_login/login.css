@@ -1,0 +1,104 @@
+/* Inicio de Sesión*/
+
+.login-wrap {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* Avatar central */
+.login-avatar {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.avatar-circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #d6eaf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.avatar-circle svg {
+  width: 36px;
+  height: 36px;
+  fill: #2980b9;
+}
+
+.login-avatar h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.login-avatar p {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Pestañas de rol */
+.login-tabs {
+  display: flex;
+  background-color: #eeeeee;
+  border-radius: 6px;
+  padding: 3px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  color: #888;
+  border: none;
+  background: none;
+  font-family: Arial, sans-serif;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background-color: white;
+  color: #3498db;
+  border: 1px solid #ddd;
+}
+
+/* Card del formulario */
+.login-card {
+  padding: 24px;
+}
+
+/* Botón de login ancho completo */
+.btn-login {
+  width: 100%;
+  justify-content: center;
+  margin-top: 6px;
+  padding: 11px;
+  font-size: 14px;
+}
+
+/* Enlace de recuperar contraseña */
+.forgot-link {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 13px;
+  color: #888;
+}
+
+.forgot-link a {
+  color: #3498db;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgot-link a:hover {
+  color: #2980b9;
+}

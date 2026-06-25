@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RF04 - Gestión Inventario | Farma 30</title>
+  <link rel="stylesheet" href="../shared/global.css"/>
+  <link rel="stylesheet" href="gestion.css"/>
+</head>
+<body>
+  <header class="top-bar">
+    <span class="rf-tag">RF04</span>
+    <span class="top-title">Gestión de Inventario</span>
+    <a class="nav-btn" href="../RF03_ventas/ventas.html">← RF03</a>
+    <a class="nav-btn" href="../RF05_deseados/deseados.html">RF05 →</a>
+  </header>
+  <main class="page">
+    <div class="page-title">RF04 · Gestión de Inventario</div>
+    <div class="page-sub">Edita el stock y precio de cada medicamento directamente en la tabla</div>
+    <div class="toolbar">
+      <button class="btn btn-primary" onclick="agregarProducto()">+ Agregar producto</button>
+      <button class="btn btn-outline" onclick="exportar()">Exportar</button>
+      <button class="btn btn-success" onclick="guardarCambios()">Guardar cambios</button>
+    </div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <table>
+        <thead><tr><th>Medicamento</th><th>Categoría</th><th>Stock</th><th>Precio</th><th>Vencimiento</th><th>Estado</th><th>Acciones</th></tr></thead>
+        <tbody id="invTable"></tbody>
+      </table>
+    </div>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="../shared/global.js"></script>
+  <script src="gestion.js"></script>
+</body>
+<body>
+
+  <!-- INCLUIR MENÚ -->
+  <link rel="stylesheet" href="../shared/menu.css">
+  <script src="../shared/global.js"></script>   <!-- ya lo tienes -->
+
+  <!-- Aquí va el menú -->
+  <div id="menuContainer"></div>
+
+  <!-- Contenido de la página -->
+  <div style="margin-left: 260px; padding: 20px;">   <!-- ajusta el margen izquierdo -->
+    <!-- Tu contenido actual va aquí -->
+  </div>
+
+  <script>
+    // Cargar el menú
+    fetch('../shared/menu.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('menuContainer').innerHTML = html;
+        
+        // Marcar la página actual como activa
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.menu-item').forEach(link => {
+          if (link.getAttribute('href').includes(currentPath.split('/').pop())) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+    function cerrarSesion() {
+      if (confirm('¿Cerrar sesión?')) {
+        sessionStorage.clear();
+        window.location.href = '../RF01_login/login.html';
+      }
+    }
+  </script>
+</html>

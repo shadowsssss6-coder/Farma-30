@@ -1,0 +1,16 @@
+/* RF14 - Búsqueda */
+.search-hero { background-color:#2980b9; border-radius:8px; padding:24px; margin-bottom:20px; text-align:center; }
+.search-hero h2 { font-size:18px; font-weight:bold; color:white; margin:0 0 14px; }
+.hero-input { width:100%; padding:12px 18px; border:none; border-radius:5px; font-size:15px; outline:none; font-family:Arial; }
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
+.chip { padding:5px 12px; border-radius:4px; border:1px solid #ccc; background:white; font-size:12px; font-weight:bold; color:#666; cursor:pointer; font-family:Arial; }
+.chip.active, .chip:hover { background:#3498db; color:white; border-color:#3498db; }
+.result-item { display:flex; align-items:center; gap:12px; padding:12px; background:white; border:1px solid #ddd; border-radius:6px; margin-bottom:6px; cursor:pointer; }
+.result-item:hover { border-color:#3498db; }
+.result-img { width:44px; height:44px; border-radius:6px; background-color:#eaf2ff; display:flex; align-items:center; justify-content:center; }
+.result-img svg { width:20px; height:20px; fill:#3498db; opacity:0.7; }
+.result-name { font-weight:bold; font-size:13px; color:#333; }
+.result-detail { font-size:12px; color:#888; margin-top:2px; }
+.result-price { font-weight:bold; color:#3498db; font-size:14px; margin-left:auto; white-space:nowrap; }
+.highlight { background-color:#fef9c3; border-radius:2px; padding:0 2px; }
+.no-results { text-align:center; color:#aaa; padding:32px; font-size:14px; }

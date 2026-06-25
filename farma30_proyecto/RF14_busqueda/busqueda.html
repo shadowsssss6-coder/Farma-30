@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RF14 - Búsqueda | Farma 30</title>
+<link rel="stylesheet" href="../shared/global.css"/><link rel="stylesheet" href="busqueda.css"/></head>
+<body>
+<header class="top-bar"><span class="rf-tag">RF14</span><span class="top-title">Barra de Búsqueda</span>
+<a class="nav-btn" href="../RF13_horarios/horarios.html">← RF13</a><a class="nav-btn" href="../RF15_scanner/scanner.html">RF15 →</a></header>
+<main class="page" style="max-width:820px">
+<div class="page-title">RF14 · Búsqueda Avanzada</div>
+<div class="page-sub">Busca medicamentos por nombre o categoría</div>
+<div class="search-hero">
+  <h2>Busca tu medicamento</h2>
+  <input type="text" id="heroSearch" class="hero-input" placeholder="Ej: Amoxicilina, Antibiótico..." oninput="doSearch(this.value)"/>
+</div>
+<div class="chips" id="chips"></div>
+<div id="results"></div>
+</main>
+<div class="toast" id="toast"></div>
+<script src="../shared/global.js"></script><script src="busqueda.js"></script>
+</body>
+<body>
+
+  <!-- INCLUIR MENÚ -->
+  <link rel="stylesheet" href="../shared/menu.css">
+  <script src="../shared/global.js"></script>   <!-- ya lo tienes -->
+
+  <!-- Aquí va el menú -->
+  <div id="menuContainer"></div>
+
+  <!-- Contenido de la página -->
+  <div style="margin-left: 260px; padding: 20px;">   <!-- ajusta el margen izquierdo -->
+    <!-- Tu contenido actual va aquí -->
+  </div>
+
+  <script>
+    // Cargar el menú
+    fetch('../shared/menu.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('menuContainer').innerHTML = html;
+        
+        // Marcar la página actual como activa
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.menu-item').forEach(link => {
+          if (link.getAttribute('href').includes(currentPath.split('/').pop())) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+    function cerrarSesion() {
+      if (confirm('¿Cerrar sesión?')) {
+        sessionStorage.clear();
+        window.location.href = '../RF01_login/login.html';
+      }
+    }
+  </script></html>

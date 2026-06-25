@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RF01 - Inicio de Sesión | Farma 30</title>
+  <link rel="stylesheet" href="../shared/global.css"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <header class="top-bar">
+    <span class="rf-tag">RF01</span>
+    <span class="top-title">Inicio de Sesión</span>
+    <a class="nav-btn" href="../RF02_inventario/inventario.html">RF02 →</a>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="page">
+    <div class="login-wrap">
+
+      <!-- Avatar y título -->
+      <div class="login-avatar">
+        <div class="avatar-circle">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <h2>Droguería Farma 30</h2>
+        <p>Ingresa con tus credenciales</p>
+      </div>
+
+      <!-- Pestañas Cliente / Empleado -->
+      <div class="login-tabs">
+        <button class="tab active" id="tabCliente" onclick="setTab('cliente')">Cliente</button>
+        <button class="tab"        id="tabEmpleado" onclick="setTab('empleado')">Empleado</button>
+      </div>
+
+      <!-- Formulario -->
+      <div class="card login-card">
+
+        <!-- Alerta de error (oculta por defecto) -->
+        <div class="alert alert-error" id="loginAlert" style="display:none">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <div class="alert-body">
+            <h4>Nombre o contraseña incorrecto</h4>
+            <p>Vuelva a intentar</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="loginUser">Nombre o identificación del usuario</label>
+          <input type="text" id="loginUser" placeholder="Ej: 10293847 o Juan Pérez"/>
+        </div>
+
+        <div class="field">
+          <label for="loginPass">Contraseña</label>
+          <input type="password" id="loginPass" placeholder="••••••••"/>
+        </div>
+
+        <button class="btn btn-primary btn-login" onclick="tryLogin()">
+          INICIAR SESIÓN
+        </button>
+
+        <div class="forgot-link">
+          ¿Olvidó su contraseña? <a id="btnRecuperar">Recuperar</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../shared/global.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

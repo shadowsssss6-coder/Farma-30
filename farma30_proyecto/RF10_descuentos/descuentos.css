@@ -1,0 +1,8 @@
+/* RF10 - Descuentos */
+.slider-row { display:flex; align-items:center; gap:12px; }
+.slider-row input[type=range] { flex:1; accent-color:#3498db; }
+.slider-val { font-size:22px; font-weight:bold; color:#3498db; min-width:55px; }
+.disc-preview { background-color:#2980b9; border-radius:8px; padding:20px; color:white; }
+.disc-pct { font-size:32px; font-weight:bold; }
+.disc-med { font-size:15px; font-weight:bold; margin-top:10px; }
+.disc-tag { display:inline-block; background:rgba(255,255,255,0.2); padding:3px 10px; border-radius:4px; font-size:12px; margin-top:10px; }
