@@ -46,9 +46,9 @@ public class UsuarioDAO {
                     user.setIdUsuario(rs.getInt("id_usuario"));
                     user.setNombre(rs.getString("nombre"));
                     user.setCorreo(rs.getString("correo"));
-                    user.setContrasena(rs.getString("contrasena"));
+                    user.setContrasena(rs.getString("contrasena_hash"));
                     user.setRol(rs.getString("rol"));
-                    user.setActivo(rs.getBoolean("activo"));
+                    
                     return user;
                 }
             }

@@ -4,7 +4,7 @@ import com.farma30.dao.UsuarioDAO;
 import com.farma30.rf01login.model.usuario;
 import java.io.IOException;
 
-// Cambiamos javax por jakarta para solucionar todas las líneas rojas de importación
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {
                 HttpSession session = request.getSession(true);
                 session.setAttribute("usuarioLogueado", usuarioValidado);
                 
-                response.sendRedirect("dashboard.html");
+                response.sendRedirect("CatalogoServlet");
             } else {
                 response.sendRedirect("index.html?error=invalid");
             }
