@@ -1,0 +1,8 @@
+# Pega/ajusta estas líneas en el .env del proyecto Laravel (generado por composer create-project)
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=modulacion_farma_30
+DB_USERNAME=root
+DB_PASSWORD=
