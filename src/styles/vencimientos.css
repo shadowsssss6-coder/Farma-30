@@ -1,0 +1,12 @@
+/* RF07 - Alertas de Vencimiento */
+.resumen-card { background:white; border:1px solid #ddd; border-radius:8px; padding:14px; text-align:center; }
+.resumen-count { font-size:28px; font-weight:bold; }
+.resumen-label { font-size:12px; color:#888; margin-top:2px; }
+.section-lbl { font-size:13px; font-weight:bold; color:#555; text-transform:uppercase; letter-spacing:0.5px; margin:20px 0 10px; }
+.venc-item { display:flex; align-items:center; gap:14px; padding:14px 18px; border-radius:6px; margin-bottom:10px; background:white; border:1px solid #ddd; border-left:4px solid transparent; }
+.venc-item.critico { border-left-color:#e74c3c; }
+.venc-item.proximo { border-left-color:#e67e22; }
+.venc-item.bajo    { border-left-color:#3498db; }
+.venc-circle { width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; }
+.venc-name { font-weight:bold; font-size:14px; color:#333; }
+.venc-detail { font-size:12px; color:#888; margin-top:3px; }

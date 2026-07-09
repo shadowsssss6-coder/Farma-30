@@ -1,0 +1,13 @@
+/* RF05 - Lista de Deseados */
+.summary-bar { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+.summary-count { font-size: 28px; font-weight: bold; color: #3498db; }
+.wish-item { display: flex; align-items: center; gap: 14px; padding: 14px; background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; transition: border-color 0.2s; }
+.wish-item:hover { border-color: #3498db; }
+.wish-img { width: 52px; height: 52px; border-radius: 6px; background-color: #eaf2ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.wish-img svg { width: 24px; height: 24px; fill: #3498db; opacity: 0.7; }
+.wish-name { font-weight: bold; font-size: 14px; color: #333; }
+.wish-cat { font-size: 12px; color: #888; margin-top: 2px; }
+.wish-price { font-size: 14px; color: #3498db; font-weight: bold; margin-top: 4px; }
+.wish-disc { font-size: 12px; color: #27ae60; font-weight: bold; margin-left: 6px; }
+.empty-wish { text-align: center; padding: 40px; color: #aaa; font-size: 14px; }
+.empty-wish a { color: #3498db; text-decoration: underline; }

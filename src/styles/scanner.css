@@ -1,0 +1,23 @@
+/* RF15 - Escáner de Código de Barras */
+.scanner-box { width:100%; max-width:300px; margin:0 auto 16px; border-radius:8px; overflow:hidden; position:relative; background-color:#1a1a2e; aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; }
+.scanner-frame { position:absolute; inset:16px; border-radius:6px; border:2px solid rgba(52,152,219,0.7); }
+.scanner-line { position:absolute; left:24px; right:24px; height:2px; background:#3498db; animation:scan 2s ease-in-out infinite; }
+@keyframes scan { 0%,100% { top:20px; } 50% { top:calc(100% - 20px); } }
+.sc { position:absolute; width:14px; height:14px; border-color:#3498db; border-style:solid; }
+.sc-tl { top:16px; left:16px;  border-width:2px 0 0 2px; }
+.sc-tr { top:16px; right:16px; border-width:2px 2px 0 0; }
+.sc-bl { bottom:16px; left:16px;  border-width:0 0 2px 2px; }
+.sc-br { bottom:16px; right:16px; border-width:0 2px 2px 0; }
+.scan-label { color:rgba(255,255,255,0.4); font-size:11px; text-align:center; }
+.scan-btn { display:block; margin:0 auto 20px; padding:10px 28px; }
+.scan-result { background:white; border:1px solid #ddd; border-radius:8px; padding:18px; }
+.result-header { display:flex; gap:12px; align-items:center; margin-bottom:16px; }
+.result-img-box { width:65px; height:65px; border-radius:8px; background-color:#eaf2ff; display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0; }
+.result-title { font-size:16px; font-weight:bold; color:#333; }
+.result-code  { font-size:11px; color:#888; margin-top:3px; font-family:monospace; }
+.spec-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #eee; font-size:13px; }
+.spec-row:last-child { border-bottom:none; }
+.spec-key { color:#888; }
+.spec-val { font-weight:bold; color:#333; }
+.action-row { display:flex; gap:10px; margin-top:16px; }
+.empty-scan { background-color:#f9f9f9; border:1px solid #ddd; border-radius:8px; padding:32px; text-align:center; color:#aaa; font-size:14px; }

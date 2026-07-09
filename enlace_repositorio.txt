@@ -1,0 +1,21 @@
+Evidencia GA7-220501096-AA4-EV03
+Proyecto: Front-end React - Drogueria Farma 30
+Aprendiz: [NOMBRE Y APELLIDO DEL APRENDIZ]
+
+Enlace del repositorio remoto (GitHub):
+[PEGAR AQUI EL ENLACE DEL REPOSITORIO UNA VEZ SUBIDO]
+
+----------------------------------------------------------------
+Pasos para subir este proyecto a GitHub:
+
+1. Crear un repositorio vacio en GitHub, por ejemplo:
+   farma30-frontend-react
+
+2. Desde la carpeta del proyecto (donde esta este archivo), ejecutar:
+   git remote add origin https://github.com/TU_USUARIO/farma30-frontend-react.git
+   git branch -M main
+   git push -u origin main
+
+3. Copiar la URL del repositorio y pegarla en este archivo,
+   reemplazando el texto entre corchetes.
+----------------------------------------------------------------

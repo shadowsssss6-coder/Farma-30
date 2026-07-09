@@ -1,0 +1,5 @@
+/* RF04 - Gestión de Inventario */
+.toolbar { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.med-name-cell { font-weight: bold; color: #2980b9; }
+.editable { border: 1px dashed #ccc; border-radius: 4px; padding: 3px 7px; font-size: 13px; background: #f9f9f9; cursor: text; display: inline-block; min-width: 55px; }
+.editable:focus { outline: none; border-color: #3498db; background: white; }
