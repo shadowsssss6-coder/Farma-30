@@ -1,0 +1,97 @@
+@php
+    $mensajesLogin = [
+        'campos_vacios' => 'Debes ingresar tu usuario y contraseña.',
+        'invalid' => 'El usuario o la contraseña son incorrectos. Verifica tus datos.',
+        'sesion_requerida' => 'Debes iniciar sesión para acceder a esta página.',
+        'server_error' => 'Ocurrió un error en el servidor. Intenta nuevamente.',
+    ];
+    $error = session('error');
+    $registro = session('registro');
+    $logout = session('logout');
+@endphp
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Droguería Farma 30</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; }
+        .text-principal { color: #1a1a1a; }
+        .text-enlace { color: #3498db; }
+        .bg-boton { background-color: #3498db; }
+        .bg-boton:hover { background-color: #2980b9; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center p-4">
+
+    <div class="w-full max-w-md flex flex-col items-center">
+        <div class="bg-[#cbe2f7] p-4 rounded-full mb-4 shadow-sm text-[#1e60aa]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+        </div>
+
+        <h1 class="text-xl font-bold text-principal mb-1">Droguería Farma 30</h1>
+        <p class="text-sm text-gray-500 mb-6">Ingresa con tus credenciales</p>
+
+        <div class="bg-white w-full rounded-xl shadow-md border border-gray-100 p-6">
+
+            @if($registro === 'success')
+                <div class="mb-4 p-3 bg-green-100 border border-green-300 text-green-700 rounded-md text-sm">
+                    Cuenta creada correctamente. Ya puedes iniciar sesión.
+                </div>
+            @endif
+
+            @if($logout === 'success')
+                <div class="mb-4 p-3 bg-blue-100 border border-blue-300 text-blue-700 rounded-md text-sm">
+                    Sesión cerrada correctamente.
+                </div>
+            @endif
+
+            @if($error && isset($mensajesLogin[$error]))
+                <div class="mb-4 p-3 bg-red-100 border border-red-300 text-red-700 rounded-md text-sm">
+                    {{ $mensajesLogin[$error] }}
+                </div>
+            @endif
+
+            <div class="flex bg-[#f3f4f6] rounded-lg p-1 mb-6 text-sm font-medium text-gray-500">
+                <button type="button" class="w-1/2 py-2 text-center text-[#2563eb] bg-white rounded-md shadow-sm focus:outline-none">Cliente</button>
+                <button type="button" class="w-1/2 py-2 text-center hover:text-gray-700 focus:outline-none">Empleado</button>
+            </div>
+
+            <form action="{{ route('login.post') }}" method="POST" class="space-y-4">
+                @csrf
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre o identificación del usuario</label>
+                    <input type="text" name="txtUsuario" required placeholder="Ej: 10293847 o Juan Pérez"
+                           value="{{ old('txtUsuario') }}"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none text-sm text-gray-800 {{ $error === 'invalid' ? 'border-red-500 ring-1 ring-red-500' : '' }}">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Contraseña</label>
+                    <input type="password" name="txtContrasena" required placeholder="••••••••"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none text-sm text-gray-800">
+                </div>
+
+                <button type="submit" class="w-full bg-boton text-white font-medium py-2.5 px-4 rounded-md transition duration-200 text-sm uppercase tracking-wider shadow-sm mt-2">
+                    Iniciar Sesión
+                </button>
+            </form>
+
+            <div class="text-center mt-4 text-xs text-gray-500 flex flex-col space-y-2">
+                <div>
+                    ¿Olvidó su contraseña? <a href="#" class="text-enlace hover:underline font-medium">Recuperar</a>
+                </div>
+                <div class="border-t border-gray-100 pt-3 mt-2">
+                    ¿No tienes una cuenta? <a href="{{ route('registro') }}" class="text-enlace hover:underline font-semibold">Regístrate aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
